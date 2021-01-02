@@ -1,0 +1,952 @@
+/*This type of selector is called an id
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border-size: border-box;
+}
+
+html, body {
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*body {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}*/
+
+nav {
+  position: absolute;
+  top: 1px;
+  background: #4c4c4c;
+  height: 60px;
+  width: 90px;
+  line-height: 63px;
+  padding: 8px 25px;
+  border-radius: 45px;
+}
+
+/*h1 is Omaha Teen Council in the header
+*/
+
+#omaha {
+  position: absolute;
+  width:300px;
+  height:100px;
+}
+
+/*h1 {
+  position: absolute;
+  top: 0;
+  margin-left: 3px;
+  margin-right: 800px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 70px;
+  color:5px;
+  text-align: left;
+}
+*/
+
+/*
+position absolute makes the element stay, but lets other elements go underneath/on top of it
+top and left makes puts the element at the top/left of the page at a certain amount (only works with position relative and position absolute)
+transform allows rotation, scale, translate, etc.
+*/
+
+/*h2 is the title of each page
+*/
+
+h1 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 80px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 80px;
+}
+
+/* h3 is for the FAQ questions
+*/
+h3 {
+  padding: 20px;
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+h4 {
+  font-family: 'Roboto Condensed', sans-serif
+}
+
+/*h5 is for the descriptions below the title page, like apply and book an event
+*/
+h5 {
+  padding: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/*h6 is for the mission description text
+*/
+h6 {
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  font-size: 45px;
+}
+
+/*h8 is for the titles of the event descriptions in the events section
+*/
+h8
+{
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*h7 is for "mission" and "who we are" in index
+*/
+h7 {
+  display: block;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 85px;
+}
+
+/*p tags are for the answers in the FAQ section
+*/
+p {
+  padding: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: medium;
+}
+
+nav label {
+  color:fffff;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+}
+
+.button span {
+  float: right;
+  line-height: 40px;
+  padding-top: 10px;
+}
+
+
+/*.button span:hover {
+  color: black;
+}*/
+
+nav ul {
+  position: absolute;
+  background: #6e6f6f;
+  list-style: none;
+  top: 57px;
+  border-radius: 20px;
+  left: 0;
+  width: 100%;
+  display: none;
+  z-index: 1001;
+  /*z-index is 1001 because of controls (members slideshow) below
+  */
+}
+
+[id=menubutton]:checked + ul,
+[id=aboutus]:checked + ul,
+[id=contact]:checked + ul{
+  display: block;
+}
+
+.menu {
+  width: 200px;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav ul li {
+  line-height: 40px;
+  padding: 8px 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+
+nav ul li label {
+  color: white;
+  font-size: 17px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+nav ul li a:hover,
+nav ul li label:hover {
+  color: #000000;
+}
+
+nav ul ul {
+  position: static;
+}
+
+nav ul ul li {
+  line-height: 30px;
+  padding-left: 30px;
+  border-bottom: none;
+}
+
+nav ul ul li a {
+  color: #e6e6e6;
+  font-size: 16px;
+} 
+
+nav ul li span {
+  float: right;
+  font-size: 20px;
+  padding: 10px;
+}
+
+#headercontainer {
+  height: 500px;
+  margin-bottom: 30px;
+  background-size: auto;
+}
+
+.fadeshow {
+  height: 500px;
+  
+}
+
+.slideshowcontainer {
+  height: 500px;
+  
+}
+
+.slideshowcontainer [data-am-fadeshow] .fs-slide {
+  background-po0ion: top;
+}
+
+/*
+this matches the height of the header container
+*/
+
+/*
+CSS for Members Slideshow
+*/
+
+.content-width {
+  width: 96%;
+  height: 400px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.slideshow-items {
+  position: relative;
+  width: 100%;
+  height: 20px;
+}
+
+.item {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+}
+
+.item-image-container {
+  position: relative;
+  width: 42%;
+}
+
+/*wrapper is my code
+*/
+.item-image-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.item-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 150%;
+  height: 100%;
+  background: #50B647;
+  opacity: 0;
+  
+}
+
+.item-image {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  display: block;
+  /* transition: property name | duration | timing-function | delay  */
+  transition: opacity .3s ease-out .45s;
+}
+
+.item-image.landscape {
+  width: auto;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  margin-left: -100%;
+}
+
+.item.active .item-image {
+  opacity: 1;
+}
+
+.item.active .item-image-container::before {
+  opacity: .8;
+}
+
+.item-description {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  width: 50%;
+  line-height: 1.8;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+/* Staggered Vertical Items ------------------------------------------------------*/
+.item-header {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  z-index: 100;
+  
+}
+
+.item-header .vertical-part {
+  margin: 0 -4px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: auto;
+  font-size: 4vw;
+  color: black;
+}
+
+.vertical-part {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.vertical-part b {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.item-header .vertical-part b {
+  transition: .70s;
+}
+
+.item-description .vertical-part b {
+  transition: .70s;
+}
+
+.item.active .item-header .vertical-part b {
+  transform: translateY(0);
+}
+
+.item.active .item-description .vertical-part b {
+  transform: translateY(0);
+}
+
+/* Controls ----------------------------------------------------------------------*/
+.controls {
+  position: relative;
+  text-align: right;
+  z-index: 1000;
+}
+
+.controls ul {
+  list-style: none;
+}
+
+.controls ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  background:#bdbdd5;;
+  cursor: pointer;
+}
+
+.controls ul li.active {
+  background:#6a6a77;;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#maincontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#faqcontainer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#whowearecontainer {
+  width: 645px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+  
+}
+
+#whowearecontainer h7{
+  font-size: 75px;
+}
+
+#omahateencouncilhomepage {
+  position: absolute;
+  z-index: 1;
+  width: 800px;
+  top: 0;
+  left: 300px;
+}
+
+#omahateencouncilsign {
+  display: flex;
+  justify-content: center;
+  width: 100%
+  top: 0;
+  
+}
+
+h1.hidden {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute!important;
+  border: 0!important;
+  padding: 0!important;
+  margin: 0!important;
+  clip: rect(1px,1px,1px,1px);
+}
+
+#indexpicturecontainer {
+  width: 505px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+}
+
+#missioncontainer {
+  justify-content: center;
+  margin-top: 40px;
+  width: 1290px;
+  height: 500px;
+}
+
+#applycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bookaneventcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#maineventscontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#maineventszinefestcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 80px;
+}
+
+#eventszinefestheadercontainer {
+  width: 350px;
+  height: 40px;
+  margin-top: 40px;
+  text-align: center;
+  background-color: none;
+}
+
+#eventszinefestdescriptioncontainer {
+  width: 350px;
+  height: 310px;
+  text-align: center;
+  background-color: #4C225E;
+}
+
+#eventszinefestpicturecontainer {
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+#maineventslobbydaycontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+#eventslobbydayheadercontainer {
+  width: 350px;
+  height: 40px;
+  margin-top: 40px;
+  text-align: center;
+  backg0pund-color: none;
+}
+
+#eventslobbydaydescriptioncontainer {
+  width: 350px;
+  height: 310px;
+  text-align: center;
+  background-color: #50B647;
+}
+
+#eventslobbydaypicturecontainer {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+#maineventsteencouncilnightcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 80px;
+}
+
+#eventsteencouncilnightheadercontainer {
+  width: 350px;
+  height: 70px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#eventsteencouncilnightdescriptioncontainer {
+  width: 350px;
+  height: 310px;
+  text-align: center;
+  background-color: #0F6DB3;
+}
+
+#eventsteencouncilnightpicturecontainer {
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+#container {
+  
+}
+
+/*
+MEMBERS CSS
+*/
+
+#mainmemberscontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 300px) { 
+  #mainmemberscontainer {
+    flex-direction: column;
+  }
+}
+
+#mainmemberscontainer p, #maineventscontainer p {
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 15px;
+}
+
+#mainmemberskaticontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 80px;
+}
+
+#memberskatiheadercontainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#memberskatidescriptioncontainer {
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  background-color: #4C225E;
+}
+
+@media (max-width: 800px) { 
+  #memberskatidescriptioncontainer {
+    height: 1000px;
+    width: unset;
+  }
+}
+
+#memberskatipicturecontainer {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#mainmembersalexiscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 80px;
+}
+
+#membersalexisheadercontainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#membersalexisdescriptioncontainer {
+  width: 600px;
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  background-color: #0F6DB3;
+}
+
+@media (max-width: 800px) { 
+  #membersalexisdescriptioncontainer {
+    height: 1000px;
+    width: unset;
+  }
+}
+
+#membersalexispicturecontainer {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/*footer {
+  margin-top: 10px;
+  height: 200px;
+  width: 100%;
+  background-color: #4c4c4c;
+  border: 1px solid blue;
+  text-align: center;
+}
+*/
+
+/*
+FOOTER CSS
+*/
+
+footer h6 {
+  text-align: left;
+}
+footer p {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-footer
+{
+  margin-top: 10px;
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3CB371;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0;
+  padding-left: 20px;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:600px;
+  padding-top: 20px;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.tiktok:hover
+{
+  background-color:#69C9D0;
+}
+
+.social-icons svg {
+  width:35%;
+  margin-left: 1px;
+  vertical-align: bottom;
+}
+
+.social-icons a.instagram:hover 
+{
+  background-color:#E1306C
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.footerquicklinks {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer-links{
+  margin-top: 20px;
+}
+
+.footerlocation {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 5px;
+  
+}
+
+/*.footercategories {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 5px;
+  border: 1px solid red;
+}
+*/
+
+.footerabout {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 500px;
+  margin: 5px;
+  
+}
+
+.footeremail {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 5px;
+}
+
+input {
+  display :none;
+}
